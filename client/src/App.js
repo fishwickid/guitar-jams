@@ -1,23 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import { Route, Switch } from "react-router-dom";
+import "./App.css";
+import { isAuthenticated } from "./lib";
+import * as components from "./components";
 
+
+import { TokenProvider } from "./lib/GlobalState";
+
+const { Home, SignUp, LogIn, LogOut, JamSesh, PrivateRoute, Header, JamFeed } = components;
 function App() {
+  const [authenticated] = useState(isAuthenticated);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <TokenProvider>
+      <Header props={{ authenticated: authenticated }} />
+        {/* <Navigation props={{ authenticated: authenticated }} /> */}
+        <main>
+          <Switch>
+            <PrivateRoute exact path="/" component={JamSesh} />
+            <Route path="/signup" component={SignUp} />
+            <Route path="/login" component={LogIn} />
+            <Route path="/logout" component={LogOut} />
+            <Route path="/jamsesh" component={JamSesh} />
+            <Route exact path="/jams/:id" component={JamFeed} />
+          </Switch>
+        </main>
+      </TokenProvider>
     </div>
   );
 }
