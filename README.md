@@ -22,7 +22,7 @@ This app was built using the following technologies:
 
 ### How to use this app
 1. Log in
-https://user-images.githubusercontent.com/10477838/97144018-b2fb0900-179e-11eb-8f53-2f6c463d4959.png
+<img width="1067" alt="Jam Log in" src="https://user-images.githubusercontent.com/10477838/97144018-b2fb0900-179e-11eb-8f53-2f6c463d4959.png">
 
 2. Create a Jam Sesh
 https://user-images.githubusercontent.com/10477838/97144012-b098af00-179e-11eb-9b34-6b7995882f14.png
