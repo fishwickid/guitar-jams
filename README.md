@@ -8,6 +8,8 @@ Conect with other guitar players and musicians both locally and from around the 
 
 This app is designed to help musicians of all levels connect with other learners to develop their musical ability, share their knowledge and ultimately create awesome music.
 
+#### See Live Demo: https://guitarsesh.herokuapp.com/
+
 ### Built with
 
 This app was built using the following technologies:
